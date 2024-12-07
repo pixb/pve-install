@@ -24,3 +24,10 @@ if ! command -v git &> /dev/null; then
 else
     echo -e "${COLOR_GREEN}git is installed${COLOR_NC}"
 fi
+
+if ! command -v vim &> /dev/null; then
+    echo -e "${COLOR_YELLOW}vim is not install${COLOR_NC}"
+    apt update  && apt install -y vim
+else
+    echo -e "${COLOR_GREEN}vim is installed${COLOR_NC}"
+fi
