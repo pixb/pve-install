@@ -8,6 +8,10 @@ if [ ! -d ./res ]; then
 	mkdir -p ./res
 fi
 
+if [ -e ./res/nvim.tar.gz ]; then
+  rm -rf ./res/nvim.tar.gz
+fi
+
 curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz -o ./res/nvim.tar.gz
 rm -rf /opt/nvim
 tar -C /opt -xzf ./res/nvim.tar.gz
