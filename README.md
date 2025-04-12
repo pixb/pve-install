@@ -34,3 +34,10 @@ bash vim_config.sh
 ```c
 bash neovim_install.sh
 ```
+
+## 5.核显直通
+
+```c
+bash iommu_grub_open.sh
+bach blacklist_add.sh
+```
