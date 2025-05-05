@@ -1,0 +1,16 @@
+{
+    "info": "Lower values indicate higher priority for directory retention",
+    "default_priority": 99,
+    "directory_priority": {
+        "大学": 3,
+		"公司": 3,
+        "家人": 3,
+        "明星": 3,
+        "其他": 4,
+        "新房": 3,
+		"游戏": 3,
+		"瑜伽": 3,
+        "在北京": 3,
+		"未处理": 3
+    }
+}
