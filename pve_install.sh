@@ -35,12 +35,12 @@ rcup -t rcm
 rcup
 
 # proxy
-http_proxy=http://192.168.123.187:10809
-https_proxy=http://192.168.123.187:10809
-ftp_proxy=http://192.168.123.187:10809
-export http_proxy
-export ftp_proxy
-export https_proxy
+#http_proxy=http://192.168.123.187:10809
+#https_proxy=http://192.168.123.187:10809
+#ftp_proxy=http://192.168.123.187:10809
+#export http_proxy
+#export ftp_proxy
+#export https_proxy
 
 if [ -d ${HOME}/.pyenv ]; then
   echo -e "${COLOR_GREEN}pyenv is installed${COLOR_NC}"
