@@ -5,6 +5,9 @@ if [ ! -e /etc/apt/trusted.gpg.d/proxmox-ve-release-6.x.gpg ]; then
 fi
 
 if [ ! -e /etc/apt/sources.list.d/pve-install-repo.list ]; then
-  echo "deb http://mirrors.ustc.edu.cn/proxmox/debian/pve buster pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list
+  echo "deb http://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list
 fi
 
+if [ ! -e /etc/apt/sources.list.d/pve-no-subscription.list.bak ]; then
+  mv /etc/apt/sources.list.d/pve-no-subscription.list /etc/apt/sources.list.d/pve-no-subscription.list.bak
+fi
