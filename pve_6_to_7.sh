@@ -22,3 +22,7 @@ else
 echo "bullseye is not exists."
 echo "${BULLSEYE_DEBIAN}" >> /etc/apt/sources.list
 fi
+
+# echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/pve buster pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
+DEBIAN_PVE_NO_SUBSCRIPTION="deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription"
+echo "${DEBIAN_PVE_NO_SUBSCRIPTION}" > 	/etc/apt/sources.list.d/pve-no-subscription.list

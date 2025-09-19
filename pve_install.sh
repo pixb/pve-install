@@ -115,16 +115,16 @@ else
 fi
 
 if [ -d ${HOME}/.config/nvim ]; then
-  echo "${COLOR_GREEN}${HOME}/.config/nvim is exists${COLOR_NC}"
+  echo -e "${COLOR_GREEN}${HOME}/.config/nvim is exists${COLOR_NC}"
 else
-  echo "${COLOR_YELLOW}${HOME}/.config/nvim is not exists${COLOR_NC}"
+  echo -e "${COLOR_YELLOW}${HOME}/.config/nvim is not exists${COLOR_NC}"
   git clone https://github.com/pixb/nvimlua.git ${HOME}/.config/nvim
 fi
 
 if [ -d ${HOME}/dev/vimrc ]; then
-  echo "${COLOR_GREEN}${HOME}/dev/vimrc is exists${COLOR_NC}"
+  echo -e "${COLOR_GREEN}${HOME}/dev/vimrc is exists${COLOR_NC}"
 else
-  echo "${COLOR_YELLOW}${HOME}/dev/vimrc is not exists${COLOR_NC}"
+  echo -e "${COLOR_YELLOW}${HOME}/dev/vimrc is not exists${COLOR_NC}"
   git clone git@github.com:pixb/vimrc.git ${HOME}/dev/vimrc
   ln -sf ${HOME}/dev/vimrc/vimrc ${HOME}/.vimrc
 fi
