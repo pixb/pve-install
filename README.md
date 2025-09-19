@@ -8,7 +8,9 @@ git clone https://github.com/pixb/pve-install.git
 
 use `root` user exec
 
-## 1.pve_source_config.sh
+## 1.pve6
+
+## 2.pve_source_config.sh
 
 - configure ceph.list to ustc soruce
 - configure pve-enterprise.list to tsinghua soruce
@@ -18,24 +20,24 @@ bash pve_source_config.sh
 apt update -y
 apt upgrade -y
 ```
-## 2.install base package
+## 3.install base package
 
 ```c
 bash pve_init.sh
 ```
-## 3.config vimrc
+## 4.config vimrc
 
 ```c
 bash vim_config.sh
 ```
 
-## 4.install neovim
+## 5.install neovim
 
 ```c
 bash neovim_install.sh
 ```
 
-## 5.核显直通
+## 6.核显直通
 
 ```c
 bash iommu_grub_open.sh
