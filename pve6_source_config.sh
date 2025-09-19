@@ -6,8 +6,8 @@ COLOR_NC='\033[0m'
 
 
 APT_SOURCES_DIR="/etc/apt/sources.list.d"
-USTC_CEPH_SOURCE="deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-quincy bookworm no-subscription"
-USTC_ENTERPRISE_SOURCE="deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian bookworm pve-no-subscription"
+USTC_CEPH_SOURCE="deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-quincy buster no-subscription"
+USTC_ENTERPRISE_SOURCE="deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian buster pve-no-subscription"
 
 # backup /etc/apt/sources.list.d
 if [ ! -e "${APT_SOURCES_DIR}.ori" ]; then
@@ -26,9 +26,9 @@ if [ ! -e /etc/apt/sources.list.ori ]; then
 fi
 
 cat << _EOF_ > /etc/apt/sources.list
-deb https://mirrors.ustc.edu.cn/debian bullseye main contrib non-free
-deb https://mirrors.ustc.edu.cn/debian bullseye-updates main contrib non-free
-deb https://mirrors.ustc.edu.cn/debian-security bullseye-security main contrib non-free
+deb http://archive.debian.org/debian/ buster main contrib non-free
+deb http://archive.debian.org/debian buster-updates main contrib non-free
+# deb http://archive.debian.org/debian-security buster-security main contrib non-free
 _EOF_
 
 
