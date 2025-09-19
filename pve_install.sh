@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 COLOR_GREEN='\033[0;32m'
 COLOR_RED='\033[0;31m'
 COLOR_YELLOW='\033[0;33m'
@@ -63,8 +63,8 @@ fi
 if command -v nvim >/dev/null 2>&1; then
   echo -e "${COLOR_GREEN}neovim is installed${COLOR_NC}"
 else
-  echo -e "$COLOR_YELLOW}neovim is not install${COLOR_NC}"
-  curl -sL https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz |
+  echo -e "${COLOR_YELLOW}neovim is not install${COLOR_NC}"
+  curl -sL https://github.com/neovim/neovim/releases/download/v0.11.4/nvim-linux-x86_64.tar.gz |
     sudo tar -xzf - --strip-components=1 --overwrite -C /usr
 fi
 
