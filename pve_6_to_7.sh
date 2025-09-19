@@ -11,3 +11,7 @@ fi
 if [ ! -e /etc/apt/sources.list.d/pve-no-subscription.list.bak ]; then
   mv /etc/apt/sources.list.d/pve-no-subscription.list /etc/apt/sources.list.d/pve-no-subscription.list.bak
 fi
+
+if [ -e /etc/apt/sources.list.d/ceph.list ]; then
+  mv /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak
+fi
