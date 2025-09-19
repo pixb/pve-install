@@ -125,6 +125,6 @@ if [ -d ${HOME}/dev/vimrc ]; then
   echo "${COLOR_GREEN}${HOME}/dev/vimrc is exists${COLOR_NC}"
 else
   echo "${COLOR_YELLOW}${HOME}/dev/vimrc is not exists${COLOR_NC}"
-  git clone https://github.com/pixb/vimrc.git ${HOME}/dev/vimrc
+  git clone git@github.com:pixb/vimrc.git ${HOME}/dev/vimrc
   ln -sf ${HOME}/dev/vimrc/vimrc ${HOME}/.vimrc
 fi
