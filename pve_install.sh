@@ -128,3 +128,22 @@ else
   git clone git@github.com:pixb/vimrc.git ${HOME}/dev/vimrc
   ln -sf ${HOME}/dev/vimrc/vimrc ${HOME}/.vimrc
 fi
+
+if command -v docker >/dev/null 2>&1; then
+  echo -e "${COLOR_GREEN}docker is installed.${COLOR_NC}"
+else
+  echo -e "${COLOR_YELLOW}docker is not install.${COLOR_NC}"
+  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  # sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian trixie stable" | sudo tee /etc/apt/sources.list.d/docker.list
+  sudo apt update
+  sudo apt install docker-ce -y
+fi
+
+if command -v docker-compose >/dev/null 2>&1; then
+  echo -e "${COLOR_GREEN}docker-compose is installed.${COLOR_NC}"
+else
+  echo -e "${COLOR_YELLOW}docker-compose is not install.${COLOR_NC}"
+  sudo apt install docker-compose -y
+fi

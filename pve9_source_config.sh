@@ -45,3 +45,6 @@ fi
 if [ -e /etc/apt/sources.list.d/pve-enterprise.list.dpkg-dist ]; then
   mv /etc/apt/sources.list.d/pve-enterprise.list.dpkg-dist /etc/apt/sources.list.d/pve-enterprise.list.dpkg-dist.bak
 fi
+apt install ca-certificates -y
+update-ca-certificates
+
